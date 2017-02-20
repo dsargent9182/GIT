@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container" style="padding-top:50px;">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="well">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="success">
+                            <td colspan="2">
+                                <bold>Existing User Login</bold>
+                                <a class="btn btn-success pull-right" href="Register.html">Register</a>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>UserName</td>
+                            <td>
+                                <input type="text" id="txtUserName" placeholder="UserName" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td>
+                                <input type="password" id="txtPassword" placeholder="Password" />
+                            </td>
+                        </tr>
+
+                        <tr class="success">
+                            <td colspan="2">
+                                <input type="button" id="btnLogin" class="btn btn-success" value="Login" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!--End well-->
+            <div id="dvError" class="alert alert-danger collapse">
+                <a id="linkClose" class="close" href="#">&times; </a>
+                <div id="dvErrorText">This is the error message</div>
+            </div>
+
+        </div><!--End col-10-->
+        <div class="modal fade" tabindex="-1" id="successModal" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="loader text-center"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div><!--end modal-->
+
+    </div><!--End container-->
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/Login.js"></script>
+</body>
+</html>
