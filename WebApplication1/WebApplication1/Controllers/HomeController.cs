@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
@@ -26,5 +27,17 @@ namespace WebApplication1.Controllers
 
 			return View();
 		}
+
+		public ActionResult Random()
+		{
+			Movie m = new Movie() { Name = "Gladiator", Studio = "Miramax" };
+
+			//return Content(m.Name);
+
+			return HttpNotFound();
+
+		}
+
+
 	}
 }
