@@ -1,0 +1,43 @@
+﻿
+@using WebApplication1.Models;
+@model WebApplication1.ViewModels.RandomMovieViewModel
+
+@{
+    ViewBag.Title = "Random";
+}
+
+<h2>Movies</h2>
+
+
+
+<ul>
+    <li>
+        @Model.Movie.Name
+    </li>
+</ul>
+
+@if (Model.Customers.Count == 0)
+{
+    <div class="alert alert-danger">
+        No Customers have rented the movie!
+    </div>
+        
+}
+
+
+
+<ul>
+    
+       
+        @foreach (Customer c in Model.Customers)
+        {
+            <li>
+                @c.Name
+            </li>
+            //String.Format("Hello");
+            //String.Format("<li>{0}</li>", c.Name); }
+        }
+</ul>
+
+
+

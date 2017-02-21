@@ -33,10 +33,16 @@ namespace WebApplication1.Controllers
 			Movie m = new Movie() { Name = "Gladiator", Studio = "Miramax" };
 
 			//return Content(m.Name);
-
-			return HttpNotFound();
-
+			//return HttpNotFound();
+			//return new EmptyResult();
+			return RedirectToAction("About","Home",new { age=23,name="David" });
 		}
+
+		public ActionResult Edit(int? id,string name)
+		{
+			return Content(String.Format("Id = {0}, Name = {1}", id,name));
+		}
+
 
 
 	}
